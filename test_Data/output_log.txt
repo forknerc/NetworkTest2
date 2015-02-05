@@ -12,7 +12,7 @@ Platform assembly: C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\A
 Loading C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.046 seconds
+- Completed reload, in  0.065 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -30,7 +30,7 @@ Platform assembly: C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\A
 Loading C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.046 seconds
+- Completed reload, in  0.043 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -38,10 +38,6 @@ Platform assembly: C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\S
 Platform assembly: C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\System.dll (this message is harmless)
 Platform assembly: C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\System.dll (this message is harmless)
-Game name: ECSL_Lab
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
 Initialize engine version: 4.6.2f1 (bd99309c2ad7)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -56,17 +52,9 @@ Platform assembly: C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\A
 Loading C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.048 seconds
+- Completed reload, in  0.050 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\David\Desktop\UNITY\NetworkTest2\test_Data\Managed\System.dll (this message is harmless)
-InvalidOperationException: The process already finished.
-  at System.Diagnostics.Process.Close (Int32 signo) [0x00000] in <filename unknown>:0 
-  at System.Diagnostics.Process.Kill () [0x00000] in <filename unknown>:0 
-  at (wrapper remoting-invoke-with-check) System.Diagnostics.Process:Kill ()
-  at networkMgr.OnDestroy () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
