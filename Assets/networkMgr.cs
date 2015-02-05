@@ -10,11 +10,12 @@ public class networkMgr : MonoBehaviour {
 	private string path;
 	private Process ServerProcess = null;
 	private HostData[] hostList;
-	private string DefaultIP;
+
+
 
 	private void StartUnityServer()
 	{
-		Network.InitializeServer(4, 25000, !Network.HavePublicAddress());
+		Network.InitializeServer(8, 25000, !Network.HavePublicAddress());
 		MasterServer.RegisterHost(typeName, gameName);
 		MasterServer.updateRate = 2;
 	}
@@ -22,7 +23,7 @@ public class networkMgr : MonoBehaviour {
 	private void StartUserServer()
 	{
 		MasterServer.ipAddress = "127.0.0.1";
-
+		MasterServer.port = 23467;
 		//Run Server Executable depending on OS
 		if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.OSXEditor) {
 			path += "/../";
@@ -35,7 +36,7 @@ public class networkMgr : MonoBehaviour {
 		ServerProcess.StartInfo.FileName = path;
 		ServerProcess.Start();		
 
-		Network.InitializeServer(4, 25000, !Network.HavePublicAddress());
+		Network.InitializeServer(8, 25001, !Network.HavePublicAddress());
 		MasterServer.RegisterHost(typeName,"UserGame");
 	}
 
@@ -52,6 +53,7 @@ public class networkMgr : MonoBehaviour {
 	void OnGUI()
 	{
 		GUI.TextField(new Rect(0, 0, 200, 25), MasterServer.ipAddress + "  " + MasterServer.port);
+		GUI.TextField(new Rect(250, 000, 200, 25), OperatingSystem);
 
 		if (!Network.isClient && !Network.isServer)
 		{
@@ -66,12 +68,13 @@ public class networkMgr : MonoBehaviour {
 
 
 
-			GUI.TextField(new Rect(100, 000, 200, 25), OperatingSystem);
+
 			GUI.TextField(new Rect(100, 50, 200, 25), path);
 
 			
 			if (hostList != null)
 			{
+				GUI.TextField(new Rect(400, 50, 100, 25), "Games");
 				for (int i = 0; i < hostList.Length; i++)
 				{
 					if (GUI.Button(new Rect(400, 100 + (110 * i), 300, 100), hostList[i].gameName))
@@ -85,15 +88,19 @@ public class networkMgr : MonoBehaviour {
 	
 	private void RefreshHostList()
 	{	
+		Network.Disconnect ();
+
+		MasterServer.ipAddress = "67.225.180.24";
+		MasterServer.port = 23466;
 		MasterServer.RequestHostList(typeName);
 	}
 
 	private void RefreshLANList()
 	{
-		//hostList = null;
-		MasterServer.ipAddress = "127.0.0.1";
-		MasterServer.port = 23466;
+		Network.Disconnect ();
 
+		MasterServer.ipAddress = "127.0.0.1";
+		MasterServer.port = 23467;
 		MasterServer.RequestHostList(typeName);
 	}
 
@@ -120,7 +127,8 @@ public class networkMgr : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {	
-		//MasterServer.RequestHostList(typeName);
+		hostList = new HostData[0];
+		Network.Disconnect ();
 		Network.sendRate = 100;
 		path = Application.dataPath;
 		Application.runInBackground = true;
@@ -130,12 +138,7 @@ public class networkMgr : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (MasterServer.PollHostList ().Length != 0) {
-						HostData[] hostData = MasterServer.PollHostList ();
-						for (int i = 0; i < hostData.Length; i++)
-								UnityEngine.Debug.Log ("Game name: " + hostData [i].gameName);
-						MasterServer.ClearHostList ();
-				} 
+
 	}
 
 	void OnDestroy()
