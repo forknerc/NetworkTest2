@@ -12,7 +12,6 @@ public class networkMgr : MonoBehaviour {
 	private HostData[] hostList;
 
 
-
 	private void StartUnityServer()
 	{
 		Network.InitializeServer(8, 25000, !Network.HavePublicAddress());
@@ -128,7 +127,6 @@ public class networkMgr : MonoBehaviour {
 	// Use this for initialization
 	void Start () {	
 		hostList = new HostData[0];
-		Network.Disconnect ();
 		Network.sendRate = 100;
 		path = Application.dataPath;
 		Application.runInBackground = true;
@@ -143,7 +141,6 @@ public class networkMgr : MonoBehaviour {
 
 	void OnDestroy()
 	{
-
 		if(ServerProcess != null)
 			ServerProcess.Kill ();
 	}
