@@ -6,23 +6,28 @@ Direct3D:
     Vendor:   NVIDIA
     VRAM:     1974 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\cforkner\Desktop\UASS\test_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\cforkner\Desktop\UASS\test_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\cforkner\Desktop\UASS\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\cforkner\Desktop\UASS\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\cforkner\Desktop\UASS\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\cforkner\Desktop\UASS\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.049 seconds
+Platform assembly: C:\Users\cforkner\Downloads\UASS-2015-02-03\UASS\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\cforkner\Downloads\UASS-2015-02-03\UASS\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\cforkner\Downloads\UASS-2015-02-03\UASS\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\cforkner\Downloads\UASS-2015-02-03\UASS\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\cforkner\Downloads\UASS-2015-02-03\UASS\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\cforkner\Downloads\UASS-2015-02-03\UASS\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.053 seconds
 desktop: 1920x1200 59Hz; virtual: 3840x1200 at 0,0
 <RI> Initializing input.
 XInput1_3.dll not found.
 <RI> Input initialized.
-Platform assembly: C:\Users\cforkner\Desktop\UASS\test_Data\Managed\System.Core.dll (this message is harmless)
-Failed to connect to master server at 127.0.0.1:23466
+Platform assembly: C:\Users\cforkner\Downloads\UASS-2015-02-03\UASS\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\cforkner\Downloads\UASS-2015-02-03\UASS\test_Data\Managed\System.dll (this message is harmless)
+Game name: UserGame
  
-(Filename:  Line: 231)
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Failed to connect to master server at 127.0.0.1:23466
+Received pong from 134.197.42.241:25000
  
-(Filename:  Line: 231)
+(Filename:  Line: 836)
+
+Received pong from 192.168.56.1:25000
+ 
+(Filename:  Line: 836)
 

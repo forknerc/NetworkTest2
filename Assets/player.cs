@@ -8,11 +8,12 @@ public class player : MonoBehaviour {
 	
 	}
 	
-	public float speed = 10f;
+	public float speed = 2f;
 	
 	void Update()
 	{
-		InputMovement();
+		if(networkView.isMine)
+			InputMovement();
 	}
 	
 	void InputMovement()
