@@ -56,13 +56,13 @@ public class networkMgr : MonoBehaviour {
 
 		if (!Network.isClient && !Network.isServer)
 		{
-			if (GUI.Button(new Rect(100, 100, 200, 100), "Start Unity Server"))
+			if (GUI.Button(new Rect(100, 100, 200, 50), "Start Unity Server"))
 				StartUnityServer();
-			if (GUI.Button(new Rect(100, 200, 200, 100), "Start User Server"))
+			if (GUI.Button(new Rect(100, 150, 200, 50), "Start User Server"))
 				StartUserServer();
-			if (GUI.Button(new Rect(100, 300, 200, 75), "Refresh Hosts"))
+			if (GUI.Button(new Rect(100, 200, 200, 50), "Refresh Hosts"))
 				RefreshHostList();
-			if (GUI.Button(new Rect(100, 350, 200, 75), "Refresh LANs"))
+			if (GUI.Button(new Rect(100, 250, 200, 50), "Refresh LANs"))
 				RefreshLANList();
 
 
